@@ -4,14 +4,17 @@ import java.util.Scanner;
 
 class MergeSort {
 	
+	// This function calls itself recursively to merge the arrays according to the index
 	void merge(int []arr, int low, int mid, int high) {
 		
+		// Temoprary arrays
 		int sizeArr1 = mid - low + 1;
 		int sizeArr2 = high - mid;
 
 		int []arr1 = new int[sizeArr1];
 		int []arr2 = new int[sizeArr2];
 
+		// Instantiating the arrays
 		int i, j;
 		for (i = 0; i < sizeArr1; i++) {
 			arr1[i] = arr[low + i];
@@ -24,6 +27,7 @@ class MergeSort {
 		j = 0;
 		int index = low;
 
+		// If one array is empty
 		while (i < sizeArr1 && j < sizeArr2) {
 			if (arr1[i] <= arr2[j]) {
 				arr[index] = arr1[i];
@@ -36,12 +40,14 @@ class MergeSort {
 			index += 1;
 		}
 
+		// If there is any element left in the first array
 		while (i < sizeArr1) {
 			arr[index] = arr1[i];
 			i += 1;
 			index += 1;
 		}
 
+		// If there is any element left in the second array 
 		while (j < sizeArr2) {
 			arr[index] = arr2[j];
 			j += 1;
@@ -49,6 +55,7 @@ class MergeSort {
 		}
 	}
 
+	// Wrapper function to call Sort function
 	void sort(int []arr, int low, int high) {
 		if (low < high) {
 			
@@ -61,6 +68,7 @@ class MergeSort {
 		}
 	}
 
+	// Utility function to print the array 
 	void display(int []arr, int N) {
 		int i = 0;
 		

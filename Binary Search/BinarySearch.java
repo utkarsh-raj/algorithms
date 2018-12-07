@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 class BinarySearch {
 	
+	// Recursive function for Binary searching
 	void binarySearch(int []arr, int low, int key, int high) {
 		
 		int mid = (low + high) / 2;
 		
+		// If low is equal to high
 		if (low > high) {
 			System.out.println("Element not found!");
 		}
@@ -28,10 +30,13 @@ class BinarySearch {
 		}
 	}
 
+	// Driver code
 	public static void main(String []args) {
+		// Object initialization
 		Scanner scanner = new Scanner(System.in);
 		BinarySearch bSearch = new BinarySearch();
 
+		// Enter user input N
 		int N = scanner.nextInt();
 		int arr[] = new int[N];
 		int i;
@@ -40,6 +45,7 @@ class BinarySearch {
 			arr[i] = scanner.nextInt();
 		}
 		
+		// Search element
 		System.out.print("Search Element: ");
 
 		int key = scanner.nextInt();

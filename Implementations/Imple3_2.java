@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 class Imple3_2 {
 	
+	// Function to implement the Sort 
 	void merge(int []arr, int low, int mid, int high) {
 		
 		int sizeArr1 = mid - low + 1;
@@ -49,6 +50,7 @@ class Imple3_2 {
 		}
 	}
 
+	// Function to invoke the sort
 	void sort(int []arr, int low, int high) {
 		if (low < high) {
 			
@@ -61,11 +63,13 @@ class Imple3_2 {
 		}
 	}
 
+	// A function that return the boolean if there are the required elements and not if the required elements are not there
 	static boolean checkForTwoElements(int []arr, int index, int sum, int N) {
 		int lPtr = 0;
 		int rPtr = N - 1;
 
 		while (lPtr < rPtr) {
+			// If the index is equal to the pointer the pointer is shifted so that the index is not rechecked
 			if (lPtr == index) {
 				lPtr += 1;
 			}
@@ -87,6 +91,7 @@ class Imple3_2 {
 		return false;
 	}
 
+	// A utility function to print the array int the arguments
 	void display(int []arr, int N) {
 		int i = 0;
 		
@@ -97,6 +102,7 @@ class Imple3_2 {
 		System.out.print("\n");
 	}
 
+	// Driver code
 	public static void main(String []args) {
 		
 		Scanner scanner = new Scanner(System.in);

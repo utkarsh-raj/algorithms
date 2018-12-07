@@ -6,6 +6,8 @@ class Imple3_3 {
 
 	boolean found = false;
 	
+	// A function to implement here Binary Search using recursion
+	// The Linear search is for selecting the element in the array and then Binary search
 	void binarySearch(int []arr, int low, int key, int high) {
 		
 		int mid = (low + high) / 2;

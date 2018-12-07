@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 class Imple3_1 {
 	
+	// Implementation of merge sort
 	void merge(int []arr, int low, int mid, int high) {
 		
 		int sizeArr1 = mid - low + 1;
@@ -61,10 +62,14 @@ class Imple3_1 {
 		}
 	}
 
+	// After sorting the carray search for the elements by using two pointers
 	static boolean checkForTwoElements(int []arr, int sum, int N) {
+		// Left pointers and Right Pointers
 		int lPtr = 0;
 		int rPtr = N - 1;
 
+		// If the current sum is rPtr = rPtr - 1
+		// If the current sum is lPtr = lPtr + 1
 		while (lPtr < rPtr) {
 			if (arr[lPtr] + arr[rPtr] == sum) {
 				return true;
@@ -81,6 +86,7 @@ class Imple3_1 {
 		return false;
 	}
 
+	// Utlity function to display the array in the arguments
 	void display(int []arr, int N) {
 		int i = 0;
 		
@@ -91,6 +97,7 @@ class Imple3_1 {
 		System.out.print("\n");
 	}
 
+	// Driver code
 	public static void main(String []args) {
 		
 		Scanner scanner = new Scanner(System.in);
